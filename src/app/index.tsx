@@ -8,13 +8,22 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 
 import { GlobalStyle } from '../styles/global-styles';
 
-import { HomePage } from './pages/HomePage/Loadable';
-import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import { Login } from './pages/Login';
+
+const AuthRoute = (props: { type: string; children: any }) => {
+  const { type, children } = props;
+  const dataSignIn = true;
+
+  if (type === 'PRIVATE' && !dataSignIn) {
+    return <Navigate to="/login" />;
+  }
+  return children;
+};
 
 export function App() {
   const { i18n } = useTranslation();
@@ -28,10 +37,16 @@ export function App() {
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
 
-      <Switch>
-        <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <AuthRoute type="GUEST">
+              <Login />
+            </AuthRoute>
+          }
+        />
+      </Routes>
       <GlobalStyle />
     </BrowserRouter>
   );
