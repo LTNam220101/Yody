@@ -5,7 +5,7 @@
  */
 import { Navbar } from 'app/components/Navbar';
 import React, { memo, useEffect } from 'react';
-import { Grid, useMediaQuery } from '@mui/material';
+import { Grid, useMediaQuery, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { AutoConfict } from './AutoConfict';
 import { Routes, Route } from 'react-router-dom';
@@ -14,7 +14,7 @@ interface Props {}
 
 const useStyles: any = makeStyles({
   root: {
-    backgroundColor: '#FFF2F2',
+    backgroundColor: '#DBEEFF',
     width: '100%',
   },
   main: {
@@ -36,11 +36,13 @@ export const Home = memo((props: Props) => {
     <div>
       <Grid className={classes.root} container>
         <Navbar />
-        <Routes>
-          {/* <Route path="" element={<Navigate to="home" />} /> */}
-          <Route path="" element={<AutoConfict />} />
-          {/* <Route path=":search" element={<Search />} /> */}
-        </Routes>
+        <Box sx={{ marginLeft: '52px', width: '100%' }}>
+          <Routes>
+            {/* <Route path="" element={<Navigate to="home" />} /> */}
+            <Route path="" element={<AutoConfict />} />
+            {/* <Route path=":search" element={<Search />} /> */}
+          </Routes>
+        </Box>
       </Grid>
     </div>
   );
