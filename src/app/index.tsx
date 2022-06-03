@@ -8,23 +8,21 @@
 
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
-
-import { GlobalStyle } from '../styles/global-styles';
-
 import { useTranslation } from 'react-i18next';
-import { Login } from './pages/Login';
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
+import { GlobalStyle } from '../styles/global-styles';
+import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
+import { Login } from './pages/Login';
 import { NotFound } from './pages/NotFound';
 
-const AuthRoute = (props: { type: string; children: any }) => {
-  const { type, children } = props;
+const AuthRoute = () => {
   const dataSignIn = true;
 
-  if (type === 'PRIVATE' && !dataSignIn) {
+  if (!dataSignIn) {
     return <Navigate to="/login" />;
   }
-  return children;
+  return <Outlet />;
 };
 
 export function App() {
@@ -40,31 +38,14 @@ export function App() {
       </Helmet>
 
       <Routes>
-      <Route
-          path="/"
-          element={
-            <AuthRoute type="PRIVATE">
-              <Home />
-            </AuthRoute>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <AuthRoute type="GUEST">
-              <Login />
-            </AuthRoute>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <AuthRoute type="GUEST">
-              <NotFound />
-            </AuthRoute>
-          }
-        />
+        <Route element={<AuthRoute />}>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Route>
 
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <GlobalStyle />
     </BrowserRouter>

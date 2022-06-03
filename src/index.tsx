@@ -5,27 +5,27 @@
  * code.
  */
 
+import { App } from 'app';
+import FontFaceObserver from 'fontfaceobserver';
+import * as React from 'react';
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-
-import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
-import FontFaceObserver from 'fontfaceobserver';
-
+import reportWebVitals from 'reportWebVitals';
 // Use consistent styling
 import 'sanitize.css/sanitize.css';
-
-import { App } from 'app';
-
-import { HelmetProvider } from 'react-helmet-async';
-
 import { configureAppStore } from 'store/configureStore';
-
-import reportWebVitals from 'reportWebVitals';
-
 // Initialize languages
 import './locales/i18n';
+
+
+
+
+
+
+
 
 // Observe loading of Inter (to remove 'Inter', remove the <link> tag in
 // the index.html file and this observer)
