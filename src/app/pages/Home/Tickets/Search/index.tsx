@@ -22,7 +22,8 @@ const useStyles: any = makeStyles({
     width: '100%',
     paddingLeft: '20px',
     paddingRight: '20px',
-    // height: '50px',
+    paddingTop: '18px',
+     // height: '50px',
     // margin: '3px 0px 20px 0px',
     // borderRadius: '9px',
     // alignItems: 'center',
@@ -40,6 +41,7 @@ const useStyles: any = makeStyles({
   },
   button: {
     margin: 'auto',
+    paddingBottom: '24px',
     display: 'flex',
     width: '460px',
     justifyContent: 'space-between',
@@ -59,7 +61,15 @@ export const Search = memo((props: Props) => {
   };
   return (
     <Box className={classes.root}>
-      <Box>Thông tin tìm kiếm</Box>
+      <Box
+        sx={{
+          fontSize: '18px',
+          fontWeight: 600,
+          marginTop: '18px',
+        }}
+      >
+        Thông tin tìm kiếm
+      </Box>
       <Box className={classes.main}>
         <Box>
           <FormControl fullWidth size="small" className="form-control">

@@ -53,6 +53,7 @@ export default function BasicTables() {
     <TableContainer
       component={Paper}
       sx={{
+        marginTop: '21px',
         filter: 'drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25))',
       }}
     >

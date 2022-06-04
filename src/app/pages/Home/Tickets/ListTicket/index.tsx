@@ -49,7 +49,15 @@ export const ListTicket = memo((props: Props) => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Box>Danh sách ticket</Box>
+      <Box
+        sx={{
+          fontSize: '18px',
+          fontWeight: 600,
+          margin: '18px 0px 8px 0px',
+        }}
+      >
+        Danh sách ticket
+      </Box>
 
       <SearchButton />
       <BasicTable />
