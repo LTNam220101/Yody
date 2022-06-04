@@ -47,6 +47,7 @@ const useStyles: any = makeStyles({
 
 export const ListTicket = memo((props: Props) => {
   const classes = useStyles();
+  
   return (
     <Box className={classes.root}>
       <Box

@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -49,6 +50,11 @@ const rows = [
 ];
 
 export default function BasicTables() {
+  let navigate = useNavigate();
+  const handleClick = (item) => {
+    console.log(item)  
+    // navigate('/login');
+  };
   return (
     <TableContainer
       component={Paper}
@@ -74,7 +80,7 @@ export default function BasicTables() {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <StyledTableRow key={row.name}>
+            <StyledTableRow key={row.name} onClick={()=> handleClick(row)}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>

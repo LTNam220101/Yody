@@ -7,11 +7,6 @@ import React, { memo, useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Box, List, ListItem } from '@mui/material';
 import { Logo2 } from '../Logo2';
-import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
-import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 interface Props {}
@@ -28,7 +23,7 @@ const useStyles: any = makeStyles({
     borderRight: '1px solid #DBEEFF',
     filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
   },
-  // logo: { textAlign: 'center' },
+  logo: { alignItems: 'center', height: '50px', display: 'flex' },
   nav: {
     flex: 1,
     display: 'flex',
@@ -71,7 +66,10 @@ export const Navbar = memo((props: Props) => {
   return (
     <div className={classes.root}>
       <Box className={classes.logo}>
-        <Logo2 />
+        <img
+          src="https://bizweb.sapocdn.net/100/438/408/themes/863105/assets/logo.svg?1654240378846"
+          style={{ width: '100%' }}
+        />
       </Box>
       <Box className={classes.nav}>
         <List className={classes.button}>

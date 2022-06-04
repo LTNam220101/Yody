@@ -23,7 +23,7 @@ const useStyles: any = makeStyles({
     paddingLeft: '20px',
     paddingRight: '20px',
     paddingTop: '18px',
-     // height: '50px',
+    // height: '50px',
     // margin: '3px 0px 20px 0px',
     // borderRadius: '9px',
     // alignItems: 'center',
@@ -38,6 +38,9 @@ const useStyles: any = makeStyles({
     // width: '100%',
     // backgroundColor: '#fff',
     // borderRadius: '9px',
+    '& div': {
+      width: '400px',
+    },
   },
   button: {
     margin: 'auto',
