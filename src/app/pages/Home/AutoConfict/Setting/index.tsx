@@ -27,11 +27,13 @@ export const Setting = memo((props: Props) => {
   return (
     <Box
       sx={{
-        width: '400px',
+        width: '500px',
         padding: '35px 36px 20px 36px',
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
+        position: 'sticky',
+        top: 0,
       }}
     >
       <Box sx={{ flex: 1 }}>

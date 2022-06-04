@@ -12,6 +12,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 interface Props {}
 
@@ -80,7 +81,14 @@ export const Navbar = memo((props: Props) => {
             </ListItem>
           ))}
         </List>
-        <Box className={classes.setting}>Setting</Box>
+        <Box className={classes.setting}>
+          <ListItem
+          // className={`${isActive === item.id ? classes.active : ''} `}
+          // onClick={() => setIsActive(item.id)}
+          >
+            <SettingsIcon />
+          </ListItem>
+        </Box>
       </Box>
     </div>
   );

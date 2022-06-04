@@ -9,6 +9,7 @@ import { Grid, useMediaQuery, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { AutoConfict } from './AutoConfict';
 import { Routes, Route } from 'react-router-dom';
+import { Tickets } from './Tickets';
 
 interface Props {}
 
@@ -39,7 +40,8 @@ export const Home = memo((props: Props) => {
         <Box sx={{ marginLeft: '52px', width: '100%' }}>
           <Routes>
             {/* <Route path="" element={<Navigate to="home" />} /> */}
-            <Route path="" element={<AutoConfict />} />
+            <Route path="" element={<Tickets />} />
+            <Route path="detail" element={<AutoConfict />} />
             {/* <Route path=":search" element={<Search />} /> */}
           </Routes>
         </Box>

@@ -8,12 +8,13 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-
+  
   body {
     font-family: 'Inter', sans-serif;
   }
 
   #root {
+    color: #242830;
     min-height: 100%;
     min-width: 100%;
   }
