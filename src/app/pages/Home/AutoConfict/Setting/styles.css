@@ -1,25 +1,25 @@
 .demo-simple-select {
-    background-color: #fff;
+  background-color: #fff;
 }
 
-.form-control{
-    margin: 15px 0 !important;
+.form-control {
+  margin: 15px 0 !important;
 }
 
-.button{
-    width: 100%;
-    font-size: 18px;
-    color: #fff;
-    background-color: #006ECB;
-    padding: 15px 0px;
-    margin: 10px 0px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 46px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
+.button {
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #006ecb;
+  padding: 15px 0px;
+  margin: 10px 0px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 46px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 .button:hover {
-    cursor: pointer;
-    background-color: #0065BB;
+  cursor: pointer;
+  background-color: #0065bb;
 }

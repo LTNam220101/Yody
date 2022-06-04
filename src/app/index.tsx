@@ -40,7 +40,7 @@ export function App() {
       </Helmet>
 
       <Routes>
-      <Route
+        <Route
           path="/"
           element={
             <AuthRoute type="PRIVATE">
@@ -64,7 +64,6 @@ export function App() {
             </AuthRoute>
           }
         />
-
       </Routes>
       <GlobalStyle />
     </BrowserRouter>

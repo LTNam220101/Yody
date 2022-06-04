@@ -72,8 +72,8 @@ export const Content = memo((props: Props) => {
             <Divider />
             <Box>169 lượt thích</Box>
             <TextField
-            sx={{marginTop: '20px'}}
-            fullWidth
+              sx={{ marginTop: '20px' }}
+              fullWidth
               multiline
               placeholder="Nội dung câu trả lời"
               value={value}

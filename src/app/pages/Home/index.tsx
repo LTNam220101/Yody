@@ -3,12 +3,12 @@
  * Home
  *
  */
+import { Box, Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { Navbar } from 'app/components/Navbar';
 import React, { memo, useEffect } from 'react';
-import { Grid, useMediaQuery, Box } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Route, Routes } from 'react-router-dom';
 import { AutoConfict } from './AutoConfict';
-import { Routes, Route } from 'react-router-dom';
 
 interface Props {}
 

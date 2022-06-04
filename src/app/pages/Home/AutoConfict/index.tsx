@@ -11,7 +11,7 @@ interface Props {}
 
 export const AutoConfict = memo((props: Props) => {
   return (
-    <div style={{display: 'flex'}}>
+    <div style={{ display: 'flex' }}>
       <Setting />
       <Content />
     </div>
